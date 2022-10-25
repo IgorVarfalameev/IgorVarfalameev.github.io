@@ -1,24 +1,30 @@
-let oneBlock = document.getElementById('one');
+let one = document.getElementById('one');
+
+let two = document.getElementById('two');
+
+let three = document.getElementById('three');
 
 let num1;
 
-oneBlock.onclick = function() {
-	num1 = Nember(oneBlock.textContent)
-}
-
-let twoBlock = document.getElementById('two');
-
 let num2;
 
-twoBlock.onclick = () => {
-	num2 = Number(twoBlock.textContent)
+one.onclick = () => {
+	num1 === undefined ? num1 = one.textContent : num2 = one.textContent ;
 }
 
-let plusBlock = document.getElementById('plus');
-
-let rezult;
-
-plusBlock.onclick = () => {
-	rezult = num1 + num2
+two.onclick = () => {
+	num1 === undefined ? num1 = two.textContent  : num2 = two.textContent ;
 }
 
+three.onclick = () => {
+	num1 === undefined ? num1 = three.textContent  : num2 = three.textContent ;
+}
+
+let plus = document.getElementById('plus');
+
+let rez;
+
+plus.onclick = () => {
+	rez = +num1 + +num2
+	alert(rez)
+}
