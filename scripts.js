@@ -7,6 +7,11 @@ const calcObject = {
     num2: '',
     operator: '',
 }
+const deleteNum = () =>{
+    if (!calcObject.operator) {
+        alert(calcObject.num1.length-1)
+    }
+}
 
 const setOperator = (op) => {
     calcObject.operator = op;
@@ -51,6 +56,11 @@ const calc = (num1, num2) => {
             break;
         case '/':
             calcObject.num1 = num1 / num2;
+            calcWindow.textContent = calcObject.num1;
+            calcObject.num2 = '';
+            break;
+        case '**':
+            calcObject.num1 = num1 ** num2;
             calcWindow.textContent = calcObject.num1;
             calcObject.num2 = '';
             break;
