@@ -7,60 +7,31 @@
   <link rel='stylesheet' href='styles.css'>
 </head>
 <body>
- 
-    <div>
-      <p>Число №1</p>
-      <div>
-        <input type="number" name="num1" id="num1" value="0">
-      </div>
-      <p>Число №2</p>
-      <div>
-        <input type="number" name="num2" id="num2" value="0">
-      </div>
-      <p>Оператор</p>
-      <div>
-        <p><input type="radio" name="operator" onclick="setOperator('plus')">Сложение</p>
-        <p><input type="radio" name="operator" onclick="setOperator('minus')">Вычитание </p>
-        <p><input type="radio" name="operator" onclick="setOperator('mult')">Умножение </p>
-        <p><input type="radio" name="operator" onclick="setOperator('division')">Деление</p>
-      </div>
-      <div>
-        <button onclick="calc(+num1.value, +num2.value)">Вычислить</button>
-      </div>
-      <div>
-        <p>Результат:</p>
-        <p id="rezult"></p>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
+  <div class="windowBlock">
+    <div class='calcWindow' id="calcWindow"></div>
+    <div class='operatorWindow' id="operatorWindow"></div>
+  </div>
   <div class='calcOwner'>
+    <div class='calcCell' onclick="reset()">Reset</div>
     <div class='calcCell'>?</div>
     <div class='calcCell'>?</div>
     <div class='calcCell'>?</div>
+    <div class='calcCell' onclick="setNum('7')">7</div>
+    <div class='calcCell' onclick="setNum('8')">8</div>
+    <div class='calcCell' onclick="setNum('9')">9</div>
+    <div class='calcCell' onclick="setOperator('*')">*</div>
+    <div class='calcCell' onclick="setNum('4')">4</div>
+    <div class='calcCell' onclick="setNum('5')">5</div>
+    <div class='calcCell' onclick="setNum('6')">6</div>
+    <div class='calcCell' onclick="setOperator('/')">/</div>
+    <div class='calcCell' onclick="setNum('1')">1</div>
+    <div class='calcCell' onclick="setNum('2')">2</div>
+    <div class='calcCell' onclick="setNum('3')">3</div>
+    <div class='calcCell' onclick="setOperator('-')">-</div>
+    <div class='calcCell' onclick="setNum('0')">0</div>
     <div class='calcCell'>?</div>
-    <div class='calcCell sevenBlock'>7</div>
-    <div class='calcCell eightBlock'>8</div>
-    <div class='calcCell nineBlock'>9</div>
-    <div class='calcCell'>?</div>
-    <div class='calcCell fourBlock'>4</div>
-    <div class='calcCell fiveBlock'>5</div>
-    <div class='calcCell sixBlock'>6</div>
-    <div class='calcCell minusBlock'>-</div>
-    <div class='calcCell oneBlock' id='one'>1</div>
-    <div class='calcCell twoBlock' id='two'>2</div>
-    <div class='calcCell threeBlock' id='three'>3</div>
-    <div class='calcCell plusBlock' id='plus'>+</div>
-    <div class='calcCell zeroBlock'>0</div>
-    <div class='calcCell'>?</div>
-    <div class='calcCell'>?</div>
-    <div class='calcCell equallyBlock'>=</div>
+    <div class='calcCell' onclick="calc(+num1, +num2)">=</div>
+    <div class='calcCell' onclick="setOperator('+')">+</div>
 
 
 

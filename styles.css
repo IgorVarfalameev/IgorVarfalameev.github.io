@@ -27,3 +27,19 @@
 	background-color: #8A8D96;
 	cursor: pointer;
 }
+
+.windowBlock{
+	display: grid;
+	grid-template-columns: 90% 10%;
+	grid-template-rows: 50px;
+	width:326px;
+	margin: 30px auto 30px auto;
+	font-size: 36px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.calcWindow{
+	line-height: 50px;
+	font-size: 24px;
+}
