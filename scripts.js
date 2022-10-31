@@ -1,30 +1,28 @@
-let one = document.getElementById('one');
+const num1 = document.getElementById("num1");
 
-let two = document.getElementById('two');
+const num2 = document.getElementById("num2");
 
-let three = document.getElementById('three');
+const rezult = document.getElementById("rezult");
 
-let num1;
+let operator;
 
-let num2;
-
-one.onclick = () => {
-	num1 === undefined ? num1 = one.textContent : num2 = one.textContent ;
+const setOperator = (op) => {
+    operator = op;
 }
 
-two.onclick = () => {
-	num1 === undefined ? num1 = two.textContent  : num2 = two.textContent ;
-}
-
-three.onclick = () => {
-	num1 === undefined ? num1 = three.textContent  : num2 = three.textContent ;
-}
-
-let plus = document.getElementById('plus');
-
-let rez;
-
-plus.onclick = () => {
-	rez = +num1 + +num2
-	alert(rez)
+calc = (num1, num2) => {
+    switch (operator) {
+        case 'plus':
+            rezult.textContent = num1 + num2;
+            break;
+        case 'minus':
+            rezult.textContent = num1 - num2;
+            break;
+        case 'mult':
+            rezult.textContent = num1 * num2;
+            break;
+        case 'division':
+            rezult.textContent = num1 / num2;
+            break;
+    }
 }

@@ -7,7 +7,39 @@
   <link rel='stylesheet' href='styles.css'>
 </head>
 <body>
-  <div></div>
+ 
+    <div>
+      <p>Число №1</p>
+      <div>
+        <input type="number" name="num1" id="num1" value="0">
+      </div>
+      <p>Число №2</p>
+      <div>
+        <input type="number" name="num2" id="num2" value="0">
+      </div>
+      <p>Оператор</p>
+      <div>
+        <p><input type="radio" name="operator" onclick="setOperator('plus')">Сложение</p>
+        <p><input type="radio" name="operator" onclick="setOperator('minus')">Вычитание </p>
+        <p><input type="radio" name="operator" onclick="setOperator('mult')">Умножение </p>
+        <p><input type="radio" name="operator" onclick="setOperator('division')">Деление</p>
+      </div>
+      <div>
+        <button onclick="calc(+num1.value, +num2.value)">Вычислить</button>
+      </div>
+      <div>
+        <p>Результат:</p>
+        <p id="rezult"></p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
   <div class='calcOwner'>
     <div class='calcCell'>?</div>
     <div class='calcCell'>?</div>

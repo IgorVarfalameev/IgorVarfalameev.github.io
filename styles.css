@@ -1,3 +1,16 @@
+.operators{
+	display:grid;
+	grid-template-columns: repeat(4, 35px);
+	grid-template-rows: 35px;
+	gap: 10px;
+}
+.operator{
+	border: 1px solid black;
+}
+.operator:hover{
+	background-color: #8A8D96;
+	cursor: pointer;
+}
 .calcOwner{
 	display:grid;
 	grid-template-columns: repeat(4, 80px);
